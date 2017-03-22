@@ -16,7 +16,13 @@ export default class App extends Application {
 
     super({
       rootName: config.modulePrefix,
+      rootElement: document.body,
       resolver
     });
+  }
+
+  renderComponent(component, parent, nextSibling) {
+    this.roots.push({ component, parent, nextSibling });
+    this.rerender();
   }
 }

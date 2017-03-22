@@ -4,31 +4,30 @@ import {
   UpdatableReference
 } from '@glimmer/object-reference';
 
-function initializeApp() {
-  let app = new App();
+const app = new App();
 
-  app.registerInitializer({
-    initialize(registry) {
-      registry.register(`component-manager:/${app.rootName}/component-managers/main`, ComponentManager)
-    }
-  });
-
-  return app;
-}
-
-class FooBarElement extends HTMLElement {
-  connectedCallback() {
-    let app = initializeApp();
-
-    app.rootRef = new UpdatableReference({
-      customElement: {
-        name: 'foo-bar',
-        element: this
-      }
-    });
-
-    app.boot();
+app.registerInitializer({
+  initialize(registry) {
+    registry.register(`component-manager:/${app.rootName}/component-managers/main`, ComponentManager)
   }
-}
+});
 
-window.customElements.define('foo-bar', FooBarElement);
+app.boot();
+
+createCustomElement('foo-bar');
+
+function createCustomElement(name) {
+  class CustomElementWrapper extends HTMLElement {
+    connectedCallback() {
+      let placeholder = document.createTextNode('');
+      let parent = this.parentNode;
+
+      parent.insertBefore(placeholder, this);
+      parent.removeChild(this);
+
+      app.renderComponent(name, parent, placeholder);
+    }
+  }
+
+  window.customElements.define(name, CustomElementWrapper);
+}

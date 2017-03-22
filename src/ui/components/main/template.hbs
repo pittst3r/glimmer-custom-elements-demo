@@ -1,3 +1,5 @@
-{{#-in-element customElement.element}}
-  {{component customElement.name}}
-{{/-in-element}}
+{{#each roots key="@index" as |root|}}
+  {{#-in-element root.parent nextSibling=root.nextSibling}}
+    {{component root.component}}
+  {{/-in-element}}
+{{/each}}
