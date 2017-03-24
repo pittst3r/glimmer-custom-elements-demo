@@ -7,10 +7,7 @@ export default {
       renderer: { definitiveCollection: 'main' },
       service: { definitiveCollection: 'services' },
       template: { definitiveCollection: 'components' },
-      util: { definitiveCollection: 'utils' },
-      'component-manager': {
-        definitiveCollection: 'component-managers'
-      }
+      util: { definitiveCollection: 'utils' }
     },
     collections: {
       main: {
@@ -22,9 +19,6 @@ export default {
       },
       services: {
         types: ['service']
-      },
-      'component-managers': {
-        types: ['component-manager']
       }
     }
   }

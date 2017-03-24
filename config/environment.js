@@ -29,10 +29,7 @@ module.exports = function(environment) {
         renderer: { definitiveCollection: 'main' },
         service: { definitiveCollection: 'services' },
         template: { definitiveCollection: 'components' },
-        util: { definitiveCollection: 'utils' },
-        'component-manager': {
-          definitiveCollection: 'component-managers'
-        }
+        util: { definitiveCollection: 'utils' }
       },
       collections: {
         main: {
@@ -44,9 +41,6 @@ module.exports = function(environment) {
         },
         services: {
           types: ['service']
-        },
-        'component-managers': {
-          types: ['component-manager']
         }
       }
     }

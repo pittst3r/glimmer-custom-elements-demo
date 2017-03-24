@@ -1,10 +1,12 @@
 import App from './main';
-import { ComponentManager } from '@glimmer/component';
-import {
-  UpdatableReference
-} from '@glimmer/object-reference';
+import { ComponentManager, setPropertyDidChange } from '@glimmer/component';
 
 const app = new App();
+const containerElement = document.getElementById('app');
+
+setPropertyDidChange(() => {
+  app.scheduleRerender();
+});
 
 app.registerInitializer({
   initialize(registry) {
@@ -13,21 +15,3 @@ app.registerInitializer({
 });
 
 app.boot();
-
-createCustomElement('foo-bar');
-
-function createCustomElement(name) {
-  class CustomElementWrapper extends HTMLElement {
-    connectedCallback() {
-      let placeholder = document.createTextNode('');
-      let parent = this.parentNode;
-
-      parent.insertBefore(placeholder, this);
-      parent.removeChild(this);
-
-      app.renderComponent(name, parent, placeholder);
-    }
-  }
-
-  window.customElements.define(name, CustomElementWrapper);
-}

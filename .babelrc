@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "exclude": [
+          "transform-es2015-classes"
+        ],
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    "external-helpers"
+  ],
+  "sourceMaps": "inline",
+  "retainLines": false
+}
