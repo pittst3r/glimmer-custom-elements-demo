@@ -12,17 +12,13 @@
     "test": "ember test"
   },
   "devDependencies": {
-    "@glimmer/application": "^0.3.4",
     "@glimmer/application-pipeline": "^0.2.1",
+    "@glimmer/application": "^0.3.4",
     "@glimmer/component": "^0.3.3",
     "@glimmer/resolver": "^0.2.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.2.2",
-    "babel-runtime": "^6.23.0",
-    "broccoli-babel-transpiler": "6.0.0",
-    "ember-cli": "2.13.0-beta.2",
-    "typescript": "^2.1.5",
-    "webcomponents.js": "^0.7.24"
+    "ember-cli": "2.10.0",
+    "typescript": "^2.1.5"
   },
   "engines": {
     "node": ">= 4.0"
