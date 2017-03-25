@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@glimmer/application-pipeline@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/@glimmer/application-pipeline/-/application-pipeline-0.2.0.tgz#ae83c14f4b7db02d87c558d71497a7841cab30d2"
+"@glimmer/application-pipeline@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/@glimmer/application-pipeline/-/application-pipeline-0.2.1.tgz#8154d2a80800e01b071e2db520c3ed2f66f458e7"
   dependencies:
-    "@glimmer/compiler" "^0.23.0-alpha.2"
-    "@glimmer/di" "^0.1.8"
+    "@glimmer/compiler" "0.23.0-alpha.7"
+    "@glimmer/di" "^0.2.0"
     "@glimmer/resolution-map-builder" "^0.1.0"
     babel-plugin-external-helpers "^6.22.0"
     babel-preset-es2015 "^6.22.0"
@@ -19,18 +19,19 @@
     broccoli-config-replace "^1.1.2"
     broccoli-merge-trees "^1.1.1"
     broccoli-persistent-filter "^1.2.2"
-    broccoli-rollup "^1.0.3"
+    broccoli-rollup "^1.1.3"
     broccoli-sass "^0.7.0"
     broccoli-source "^1.1.0"
     broccoli-stew "^1.3.1"
     broccoli-string-replace "^0.1.1"
     broccoli-typescript-compiler "^1.0.1"
     broccoli-uglify-sourcemap "^1.4.0"
+    ember-cli-inject-live-reload "^1.4.1"
     handlebars "^4.0.5"
     heimdalljs-logger "^0.1.8"
     lodash.defaultsdeep "^4.6.0"
     rimraf "^2.5.4"
-    rollup "^0.36.4"
+    rollup "^0.41.6"
     rollup-plugin-babel "^2.7.1"
     rollup-plugin-node-resolve "^2.0.0"
     walk-sync "^0.3.1"
@@ -46,14 +47,14 @@
     "@glimmer/runtime" "^0.23.0-alpha.6"
     "@glimmer/util" "^0.23.0-alpha.6"
 
-"@glimmer/compiler@^0.23.0-alpha.2":
-  version "0.23.0-alpha.6"
-  resolved "https://registry.npmjs.org/@glimmer/compiler/-/compiler-0.23.0-alpha.6.tgz#45da41196b45d79dad3b45835e7060a379b2f721"
+"@glimmer/compiler@0.23.0-alpha.7":
+  version "0.23.0-alpha.7"
+  resolved "https://registry.npmjs.org/@glimmer/compiler/-/compiler-0.23.0-alpha.7.tgz#be97d71440485e38f07e85681e601a8183a4419b"
   dependencies:
-    "@glimmer/interfaces" "^0.22.0"
-    "@glimmer/syntax" "^0.23.0-alpha.6"
-    "@glimmer/util" "^0.23.0-alpha.6"
-    "@glimmer/wire-format" "^0.23.0-alpha.6"
+    "@glimmer/interfaces" "^0.23.0-alpha.7"
+    "@glimmer/syntax" "^0.23.0-alpha.7"
+    "@glimmer/util" "^0.23.0-alpha.7"
+    "@glimmer/wire-format" "^0.23.0-alpha.7"
     simple-html-tokenizer "^0.3.0"
 
 "@glimmer/component@^0.3.3":
@@ -62,7 +63,7 @@
   dependencies:
     "@glimmer/util" "^0.23.0-alpha.6"
 
-"@glimmer/di@^0.1.11", "@glimmer/di@^0.1.8", "@glimmer/di@^0.1.9":
+"@glimmer/di@^0.1.11", "@glimmer/di@^0.1.9":
   version "0.1.11"
   resolved "https://registry.npmjs.org/@glimmer/di/-/di-0.1.11.tgz#a6878c07a13a2c2c76fcde598a5c97637bfc4280"
 
@@ -75,6 +76,12 @@
   resolved "https://registry.npmjs.org/@glimmer/interfaces/-/interfaces-0.22.0.tgz#69915fb6416e9cf024c73178ced513b475944baa"
   dependencies:
     "@glimmer/wire-format" "^0.22.0"
+
+"@glimmer/interfaces@^0.23.0-alpha.7":
+  version "0.23.0-alpha.7"
+  resolved "https://registry.npmjs.org/@glimmer/interfaces/-/interfaces-0.23.0-alpha.7.tgz#e60f4e312863fb6e2c9c3767200ee5105a9a3ba5"
+  dependencies:
+    "@glimmer/wire-format" "^0.23.0-alpha.7"
 
 "@glimmer/object-reference@^0.23.0-alpha.6":
   version "0.23.0-alpha.6"
@@ -125,12 +132,12 @@
     "@glimmer/util" "^0.23.0-alpha.6"
     "@glimmer/wire-format" "^0.23.0-alpha.6"
 
-"@glimmer/syntax@^0.23.0-alpha.6":
-  version "0.23.0-alpha.6"
-  resolved "https://registry.npmjs.org/@glimmer/syntax/-/syntax-0.23.0-alpha.6.tgz#f1b6c7d84706981008a6eed398a77f93808161bc"
+"@glimmer/syntax@^0.23.0-alpha.7":
+  version "0.23.0-alpha.7"
+  resolved "https://registry.npmjs.org/@glimmer/syntax/-/syntax-0.23.0-alpha.7.tgz#f6439c09122ab377f31547532c675f97b3126ea3"
   dependencies:
-    "@glimmer/interfaces" "^0.22.0"
-    "@glimmer/util" "^0.23.0-alpha.6"
+    "@glimmer/interfaces" "^0.23.0-alpha.7"
+    "@glimmer/util" "^0.23.0-alpha.7"
     handlebars "^4.0.6"
     simple-html-tokenizer "^0.3.0"
 
@@ -141,6 +148,10 @@
 "@glimmer/util@^0.23.0-alpha.6":
   version "0.23.0-alpha.6"
   resolved "https://registry.npmjs.org/@glimmer/util/-/util-0.23.0-alpha.6.tgz#c8392d9d1583fc178934e469c1be4d4d96bb9a76"
+
+"@glimmer/util@^0.23.0-alpha.7":
+  version "0.23.0-alpha.7"
+  resolved "https://registry.npmjs.org/@glimmer/util/-/util-0.23.0-alpha.7.tgz#661833c9affd24f5f87474910b83c954e2c77504"
 
 "@glimmer/wire-format@^0.22.0":
   version "0.22.0"
@@ -153,6 +164,12 @@
   resolved "https://registry.npmjs.org/@glimmer/wire-format/-/wire-format-0.23.0-alpha.6.tgz#df0e57369f97bbf4722b0b86fb8d70054a07bf65"
   dependencies:
     "@glimmer/util" "^0.23.0-alpha.6"
+
+"@glimmer/wire-format@^0.23.0-alpha.7":
+  version "0.23.0-alpha.7"
+  resolved "https://registry.npmjs.org/@glimmer/wire-format/-/wire-format-0.23.0-alpha.7.tgz#54fa8aa56920c8c0b16ee0546c8cbc7937f5a611"
+  dependencies:
+    "@glimmer/util" "^0.23.0-alpha.7"
 
 abbrev@1:
   version "1.1.0"
@@ -1341,7 +1358,7 @@ broccoli-plugin@^1.0.0, broccoli-plugin@^1.2.0, broccoli-plugin@^1.2.1, broccoli
     rimraf "^2.3.4"
     symlink-or-copy "^1.1.8"
 
-broccoli-rollup@^1.0.3:
+broccoli-rollup@^1.1.3:
   version "1.1.3"
   resolved "https://registry.npmjs.org/broccoli-rollup/-/broccoli-rollup-1.1.3.tgz#3746e7464f81417747754c71b81e3135affa8617"
   dependencies:
@@ -1992,6 +2009,10 @@ ember-cli-get-component-path-option@^1.0.0:
 ember-cli-get-dependency-depth@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/ember-cli-get-dependency-depth/-/ember-cli-get-dependency-depth-1.0.0.tgz#e0afecf82a2d52f00f28ab468295281aec368d11"
+
+ember-cli-inject-live-reload@^1.4.1:
+  version "1.6.1"
+  resolved "https://registry.npmjs.org/ember-cli-inject-live-reload/-/ember-cli-inject-live-reload-1.6.1.tgz#82b8f5be454815a75e7f6d42c9ce0bc883a914a3"
 
 ember-cli-is-package-missing@^1.0.0:
   version "1.0.0"
@@ -4195,15 +4216,7 @@ qs@~6.2.0:
   version "6.2.3"
   resolved "https://registry.npmjs.org/qs/-/qs-6.2.3.tgz#1cfcb25c10a9b2b483053ff39f5dfc9233908cfe"
 
-quick-temp@^0.1.2, quick-temp@^0.1.3:
-  version "0.1.6"
-  resolved "https://registry.npmjs.org/quick-temp/-/quick-temp-0.1.6.tgz#a6242a15cba9f9cdbd341287b5c569e318eec307"
-  dependencies:
-    mktemp "~0.4.0"
-    rimraf "~2.2.6"
-    underscore.string "~2.3.3"
-
-quick-temp@^0.1.5, quick-temp@^0.1.8:
+quick-temp@^0.1.2, quick-temp@^0.1.3, quick-temp@^0.1.5, quick-temp@^0.1.8:
   version "0.1.8"
   resolved "https://registry.npmjs.org/quick-temp/-/quick-temp-0.1.8.tgz#bab02a242ab8fb0dd758a3c9776b32f9a5d94408"
   dependencies:
@@ -4491,13 +4504,7 @@ rollup-pluginutils@^1.5.0:
     estree-walker "^0.2.1"
     minimatch "^3.0.2"
 
-rollup@^0.36.4:
-  version "0.36.4"
-  resolved "https://registry.npmjs.org/rollup/-/rollup-0.36.4.tgz#a224494c5386c1d73d38f7bb86f69f5eb011a3d2"
-  dependencies:
-    source-map-support "^0.4.0"
-
-rollup@^0.41.4:
+rollup@^0.41.4, rollup@^0.41.6:
   version "0.41.6"
   resolved "https://registry.npmjs.org/rollup/-/rollup-0.41.6.tgz#e0d05497877a398c104d816d2733a718a7a94e2a"
   dependencies:
@@ -5026,10 +5033,6 @@ uglify-to-browserify@~1.0.0:
 ultron@1.0.x:
   version "1.0.2"
   resolved "https://registry.npmjs.org/ultron/-/ultron-1.0.2.tgz#ace116ab557cd197386a4e88f4685378c8b2e4fa"
-
-underscore.string@~2.3.3:
-  version "2.3.3"
-  resolved "https://registry.npmjs.org/underscore.string/-/underscore.string-2.3.3.tgz#71c08bf6b428b1133f37e78fa3a21c82f7329b0d"
 
 underscore.string@~3.3.4:
   version "3.3.4"
